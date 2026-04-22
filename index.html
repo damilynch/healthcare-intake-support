@@ -3,233 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Damilola | Medical Assistant & Revenue Cycle Specialist</title>
+<title>Damcey MVA | Medical Assistant Revenue Cycle Services</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!--
+╔══════════════════════════════════════════════════════╗
+║  SETUP INSTRUCTIONS — READ BEFORE GOING LIVE        ║
+╠══════════════════════════════════════════════════════╣
+║  STEP 1: Go to https://formspree.io                  ║
+║  STEP 2: Sign up free with uche.damilynda@gmail.com  ║
+║  STEP 3: Create New Form → name: "MVA Leads"         ║
+║  STEP 4: Copy your Form ID (e.g. xpwzgkqr)          ║
+║  STEP 5: Find YOUR_FORMSPREE_ID below and replace it ║
+║  STEP 6: Upload this file to your hosting            ║
+║  STEP 7: Test by filling the form yourself           ║
+║                                                      ║
+║  SHARING ON SOCIAL (add these UTM links):            ║
+║  LinkedIn:  mva.damcey.space/?utm_source=linkedin    ║
+║  Facebook:  mva.damcey.space/?utm_source=facebook    ║
+║  The form captures source automatically.             ║
+╚══════════════════════════════════════════════════════╝
+-->
+
 <style>
-  :root {
-    --navy: #0D1B2A;
-    --navy2: #1A2F45;
-    --blue: #1B6CA8;
-    --accent: #3AAADC;
-    --mint: #2DD4BF;
-    --warm: #F5F0E8;
-    --cream: #FAFAF7;
-    --text: #2C3E50;
-    --muted: #6B7A8D;
-    --border: #E2E8F0;
-    --white: #FFFFFF;
-  }
+:root {
+  --navy:#0D1B2A; --navy2:#142333; --blue:#1B6CA8;
+  --accent:#3AAADC; --mint:#2DD4BF;
+  --warm:#F7F4EF; --cream:#FAFAF7;
+  --text:#2C3E50; --muted:#6B7A8D; --border:#E2E8F0;
+  --white:#FFFFFF; --green:#1A7A4A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,.97);
+  backdrop-filter:blur(14px);padding:0 6%;height:66px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid rgba(58,170,220,.15)}
+.logo{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--white)}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.82rem;
+  font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent)!important;color:var(--navy)!important;
+  padding:.45rem 1.1rem;border-radius:6px;font-weight:600!important}
+.nav-cta:hover{background:var(--mint)!important}
 
-  html { scroll-behavior: smooth; }
+/* HERO */
+.hero{min-height:100vh;background:var(--navy);display:grid;
+  grid-template-columns:1fr 1fr;align-items:center;
+  padding:100px 6% 60px;gap:4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-10%;right:-5%;
+  width:600px;height:600px;pointer-events:none;
+  background:radial-gradient(circle,rgba(58,170,220,.07) 0%,transparent 70%)}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.tag{display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(58,170,220,.1);border:1px solid rgba(58,170,220,.25);
+  border-radius:100px;padding:.3rem .9rem;font-size:.72rem;color:var(--accent);
+  letter-spacing:.09em;text-transform:uppercase;font-weight:600;margin-bottom:1.4rem}
+.tag::before{content:'';width:6px;height:6px;background:var(--mint);
+  border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero h1{font-family:'DM Serif Display',serif;
+  font-size:clamp(2.2rem,3.8vw,3.6rem);color:var(--white);line-height:1.12;margin-bottom:1.2rem}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.6);line-height:1.75;
+  max-width:490px;margin-bottom:2.25rem}
+.hero-sub strong{color:rgba(255,255,255,.9);font-weight:500}
+.btns{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn-p{background:var(--accent);color:var(--navy);padding:.8rem 1.75rem;
+  border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .2s}
+.btn-p:hover{background:var(--mint);transform:translateY(-1px)}
+.btn-g{border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);
+  padding:.8rem 1.75rem;border-radius:8px;font-weight:500;font-size:.9rem;
+  text-decoration:none;transition:all .2s}
+.btn-g:hover{border-color:var(--accent);color:var(--accent)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;animation:fadeUp .8s .3s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  border-radius:12px;padding:1.4rem;text-align:center;transition:border-color .2s}
+.stat:hover{border-color:rgba(58,170,220,.35)}
+.stat-n{font-family:'DM Serif Display',serif;font-size:2.6rem;color:var(--accent);
+  line-height:1;margin-bottom:.35rem}
+.stat-l{font-size:.73rem;color:rgba(255,255,255,.45);letter-spacing:.04em;
+  text-transform:uppercase;line-height:1.45}
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    overflow-x: hidden;
-  }
+/* SECTIONS */
+section{padding:80px 6%}
+.lbl{display:inline-block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:600;color:var(--accent);margin-bottom:.7rem;padding:.28rem .8rem;
+  border:1px solid rgba(27,108,168,.3);border-radius:100px;background:rgba(27,108,168,.06)}
+.sh{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,2.8vw,2.6rem);
+  color:var(--navy);line-height:1.2;margin-bottom:.9rem}
+.ss{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:580px;margin-bottom:2.75rem}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(13,27,42,0.97);
-    backdrop-filter: blur(12px);
-    padding: 0 5%;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 68px;
-    border-bottom: 1px solid rgba(58,170,220,0.2);
-  }
-  .nav-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.3rem;
-    color: var(--white);
-    letter-spacing: 0.02em;
-  }
-  .nav-logo span { color: var(--accent); }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--accent); }
-  .nav-cta {
-    background: var(--accent);
-    color: var(--navy) !important;
-    padding: 0.5rem 1.25rem;
-    border-radius: 6px;
-    font-weight: 600 !important;
-    transition: background 0.2s !important;
-  }
-  .nav-cta:hover { background: var(--mint) !important; color: var(--navy) !important; }
-
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    background: var(--navy);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 100px 8% 60px;
-    gap: 4rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; top: -20%; right: -10%;
-    width: 700px; height: 700px;
-    background: radial-gradient(circle, rgba(58,170,220,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero::after {
-    content: '';
-    position: absolute; bottom: 0; left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  }
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: rgba(58,170,220,0.12);
-    border: 1px solid rgba(58,170,220,0.3);
-    border-radius: 100px;
-    padding: 0.35rem 1rem;
-    font-size: 0.78rem;
-    color: var(--accent);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
-  .hero-tag::before {
-    content: '';
-    width: 7px; height: 7px;
-    background: var(--mint);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.7); }
-  }
-  .hero h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(2.4rem, 4vw, 3.8rem);
-    color: var(--white);
-    line-height: 1.12;
-    margin-bottom: 1.25rem;
-  }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--accent);
-  }
-  .hero-sub {
-    font-size: 1.05rem;
-    color: rgba(255,255,255,0.65);
-    line-height: 1.7;
-    max-width: 500px;
-    margin-bottom: 2.5rem;
-  }
-  .hero-sub strong { color: rgba(255,255,255,0.9); font-weight: 500; }
-  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--accent);
-    color: var(--navy);
-    padding: 0.85rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: all 0.2s;
-    letter-spacing: 0.02em;
-  }
-  .btn-primary:hover { background: var(--mint); transform: translateY(-1px); }
-  .btn-outline {
-    border: 1px solid rgba(255,255,255,0.25);
-    color: rgba(255,255,255,0.85);
-    padding: 0.85rem 2rem;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-  .hero-stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
-    animation: fadeUp 0.8s 0.3s both;
-  }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .stat-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: border-color 0.2s;
-  }
-  .stat-card:hover { border-color: rgba(58,170,220,0.4); }
-  .stat-number {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.8rem;
-    color: var(--accent);
-    line-height: 1;
-    margin-bottom: 0.4rem;
-  }
-  .stat-label {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    line-height: 1.4;
-  }
-
-  /* ── SECTION SHELL ── */
-  section { padding: 90px 8%; }
-  .section-label {
-    display: inline-block;
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
-    padding: 0.3rem 0.9rem;
-    border: 1px solid rgba(27,108,168,0.3);
-    border-radius: 100px;
-    background: rgba(27,108,168,0.07);
-  }
-  .section-heading {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(1.9rem, 3vw, 2.8rem);
-    color: var(--navy);
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-  .section-sub {
-    font-size: 1rem;
-    color: var(--muted);
-    line-height: 1.7;
-    max-width: 600px;
-    margin-bottom: 3rem;
-  }
-
-  /* ── PROBLEM SECTION ── */
+/* ── PROBLEM SECTION ── */
   .problem { background: var(--warm); }
   .problem-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
     margin-top: 2.5rem;
   }
+  .section-label {display:inline-block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:600;color:var(--accent);margin-bottom:.7rem;padding:.28rem .8rem;
+  border:1px solid rgba(27,108,168,.3);border-radius:100px;background:rgba(27,108,168,.06)}
+  .section-heading {font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,2.8vw,2.6rem);
+  color:var(--navy);line-height:1.2;margin-bottom:.9rem}
+  .section-sub {font-size:.95rem;color:var(--muted);line-height:1.75;max-width:580px;margin-bottom:2.75rem}
   .problem-card {
     background: var(--white);
     border: 1px solid var(--border);
@@ -255,385 +138,157 @@
   .problem-card h4 { font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
   .problem-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
 
-  /* ── SERVICES ── */
-  .services { background: var(--cream); }
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
-  .service-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 2rem;
-    display: flex; flex-direction: column;
-    transition: all 0.25s;
-    position: relative;
-    overflow: hidden;
-  }
-  .service-card:hover { border-color: var(--accent); box-shadow: 0 12px 40px rgba(27,108,168,0.1); transform: translateY(-3px); }
-  .service-card.featured {
-    border-color: var(--blue);
-    background: linear-gradient(160deg, var(--navy2), var(--navy));
-    color: var(--white);
-  }
-  .service-card.featured::after {
-    content: 'MOST POPULAR';
-    position: absolute; top: 1.25rem; right: -2rem;
-    background: var(--accent);
-    color: var(--navy);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    padding: 0.3rem 3rem;
-    transform: rotate(45deg) translateX(1rem);
-  }
-  .service-icon {
-    width: 48px; height: 48px;
-    border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem;
-    margin-bottom: 1.25rem;
-  }
-  .service-card:not(.featured) .service-icon { background: rgba(27,108,168,0.08); }
-  .service-card.featured .service-icon { background: rgba(58,170,220,0.2); }
-  .service-card h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: inherit;
-  }
-  .service-card:not(.featured) h3 { color: var(--navy); }
-  .service-number {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-    color: var(--accent);
-  }
-  .service-desc {
-    font-size: 0.88rem;
-    line-height: 1.65;
-    margin-bottom: 1.5rem;
-    flex: 1;
-  }
-  .service-card:not(.featured) .service-desc { color: var(--muted); }
-  .service-card.featured .service-desc { color: rgba(255,255,255,0.65); }
-  .service-deliverables { list-style: none; margin-bottom: 1.75rem; }
-  .service-deliverables li {
-    font-size: 0.83rem;
-    padding: 0.4rem 0;
-    display: flex; align-items: flex-start; gap: 0.5rem;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-  }
-  .service-card.featured .service-deliverables li { border-bottom-color: rgba(255,255,255,0.08); color: rgba(255,255,255,0.75); }
-  .service-deliverables li::before {
-    content: '✓';
-    color: var(--mint);
-    font-weight: 700;
-    font-size: 0.8rem;
-    flex-shrink: 0;
-    margin-top: 0.05rem;
-  }
-  .service-price {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.5rem;
-    margin-bottom: 0.2rem;
-  }
-  .service-card:not(.featured) .service-price { color: var(--navy); }
-  .service-card.featured .service-price { color: var(--accent); }
-  .service-timeline { font-size: 0.78rem; color: var(--muted); margin-bottom: 1.25rem; }
-  .service-card.featured .service-timeline { color: rgba(255,255,255,0.45); }
-  .btn-service {
-    display: block; text-align: center;
-    padding: 0.75rem;
-    border-radius: 8px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.2s;
-    letter-spacing: 0.02em;
-  }
-  .service-card:not(.featured) .btn-service {
-    background: rgba(27,108,168,0.08);
-    color: var(--blue);
-    border: 1px solid rgba(27,108,168,0.2);
-  }
-  .service-card:not(.featured) .btn-service:hover { background: var(--blue); color: var(--white); }
-  .service-card.featured .btn-service { background: var(--accent); color: var(--navy); }
-  .service-card.featured .btn-service:hover { background: var(--mint); }
+/* SERVICES */
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.svc{background:var(--white);border:1px solid var(--border);border-radius:14px;
+  padding:1.85rem;display:flex;flex-direction:column;transition:all .22s;
+  position:relative;overflow:hidden}
+.svc:hover{border-color:var(--accent);box-shadow:0 10px 36px rgba(27,108,168,.09);transform:translateY(-2px)}
+.svc.feat{border-color:var(--blue);background:linear-gradient(155deg,var(--navy2),var(--navy))}
+.svc.feat::after{content:'MOST POPULAR';position:absolute;top:1.1rem;right:-2.5rem;
+  background:var(--accent);color:var(--navy);font-size:.6rem;font-weight:700;
+  letter-spacing:.1em;padding:.28rem 3.5rem;transform:rotate(45deg) translateX(.8rem)}
+.svc-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;
+  justify-content:center;font-size:1.3rem;margin-bottom:1.1rem}
+.svc:not(.feat) .svc-icon{background:rgba(27,108,168,.08)}
+.svc.feat .svc-icon{background:rgba(58,170,220,.18)}
+.svc-num{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;
+  color:var(--accent);margin-bottom:.35rem}
+.svc h3{font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:.45rem}
+.svc:not(.feat) h3{color:var(--navy)}
+.svc.feat h3{color:var(--white)}
+.svc-desc{font-size:.85rem;line-height:1.65;flex:1;margin-bottom:1.4rem}
+.svc:not(.feat) .svc-desc{color:var(--muted)}
+.svc.feat .svc-desc{color:rgba(255,255,255,.6)}
+.svc ul{list-style:none;margin-bottom:1.5rem}
+.svc ul li{font-size:.8rem;padding:.38rem 0;display:flex;align-items:flex-start;
+  gap:.45rem;border-bottom:1px solid rgba(0,0,0,.05)}
+.svc.feat ul li{border-color:rgba(255,255,255,.07);color:rgba(255,255,255,.7)}
+.svc ul li::before{content:'✓';color:var(--mint);font-weight:700;font-size:.76rem;flex-shrink:0}
+.svc-price{font-family:'DM Serif Display',serif;font-size:1.45rem;margin-bottom:.18rem}
+.svc:not(.feat) .svc-price{color:var(--navy)}
+.svc.feat .svc-price{color:var(--accent)}
+.svc-time{font-size:.74rem;color:var(--muted);margin-bottom:1.1rem}
+.svc.feat .svc-time{color:rgba(255,255,255,.4)}
+.btn-s{display:block;text-align:center;padding:.7rem;border-radius:7px;
+  font-size:.85rem;font-weight:600;text-decoration:none;transition:all .2s}
+.svc:not(.feat) .btn-s{background:rgba(27,108,168,.08);color:var(--blue);
+  border:1px solid rgba(27,108,168,.2)}
+.svc:not(.feat) .btn-s:hover{background:var(--blue);color:var(--white)}
+.svc.feat .btn-s{background:var(--accent);color:var(--navy)}
+.svc.feat .btn-s:hover{background:var(--mint)}
 
-  /* ── STANDARDS ── */
-  .standards { background: var(--navy); }
-  .standards .section-heading { color: var(--white); }
-  .standards .section-sub { color: rgba(255,255,255,0.55); }
-  .standards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-  .standard-block {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 14px;
-    padding: 1.75rem;
-    transition: border-color 0.2s;
-  }
-  .standard-block:hover { border-color: rgba(58,170,220,0.35); }
-  .standard-block h4 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1rem;
-    color: var(--white);
-    margin-bottom: 0.3rem;
-    display: flex; align-items: center; gap: 0.6rem;
-  }
-  .standard-block h4 span { color: var(--accent); font-size: 1.2rem; }
-  .standard-block p { font-size: 0.83rem; color: rgba(255,255,255,0.45); margin-bottom: 1rem; }
-  .standard-items { display: flex; flex-direction: column; gap: 0.4rem; }
-  .standard-item {
-    display: flex; align-items: center; gap: 0.6rem;
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.7);
-    padding: 0.4rem 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-  .standard-item:last-child { border-bottom: none; }
-  .standard-item::before {
-    content: '';
-    width: 6px; height: 6px;
-    background: var(--mint);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
+/* STANDARDS */
+.stds{background:var(--warm)}
+.std-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.std{background:var(--white);border:1px solid var(--border);border-radius:13px;
+  padding:1.6rem;transition:border-color .2s}
+.std:hover{border-color:var(--accent)}
+.std h4{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--navy);
+  margin-bottom:.25rem}
+.std p{font-size:.78rem;color:var(--muted);margin-bottom:.85rem}
+.std-items{display:flex;flex-direction:column;gap:.35rem}
+.std-item{display:flex;align-items:center;gap:.55rem;font-size:.79rem;color:var(--text);
+  padding:.35rem 0;border-bottom:1px solid var(--border)}
+.std-item:last-child{border-bottom:none}
+.std-item::before{content:'';width:5px;height:5px;background:var(--mint);
+  border-radius:50%;flex-shrink:0}
 
-  /* ── PROCESS ── */
-  .process { background: var(--warm); }
-  .process-steps {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
-    margin-top: 2rem;
-    position: relative;
-  }
-  .process-steps::before {
-    content: '';
-    position: absolute; top: 28px; left: 10%; right: 10%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--mint));
-    z-index: 0;
-  }
-  .process-step { text-align: center; padding: 0 1rem; position: relative; z-index: 1; }
-  .step-num {
-    width: 56px; height: 56px;
-    background: var(--navy);
-    border: 2px solid var(--accent);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.3rem;
-    color: var(--accent);
-    margin: 0 auto 1.25rem;
-  }
-  .process-step h4 { font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
-  .process-step p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+/* ABOUT */
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:3.5rem;align-items:center}
+.about-card{background:linear-gradient(140deg,var(--navy2),var(--navy));border-radius:18px;
+  padding:2.25rem;text-align:center;border:1px solid rgba(58,170,220,.18)}
+.about-init{width:90px;height:90px;background:var(--accent);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--navy);margin:0 auto 1.3rem}
+.about-name{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--white);margin-bottom:.35rem}
+.about-title{font-size:.76rem;color:rgba(255,255,255,.45);letter-spacing:.05em;
+  text-transform:uppercase;margin-bottom:1.3rem}
+.badges{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center}
+.badge{background:rgba(58,170,220,.1);border:1px solid rgba(58,170,220,.22);
+  border-radius:100px;padding:.25rem .65rem;font-size:.68rem;color:var(--accent);font-weight:500}
+.about-text p{font-size:.92rem;color:var(--muted);line-height:1.78;margin-bottom:1.1rem}
+.about-text strong{color:var(--text)}
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-top:1.3rem}
+.cred{display:flex;align-items:center;gap:.55rem;font-size:.8rem;color:var(--text);
+  padding:.55rem;background:var(--white);border-radius:7px;border:1px solid var(--border)}
 
-  /* ── OUTCOMES ── */
-  .outcomes { background: var(--cream); }
-  .outcomes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
-  .outcomes-list { display: flex; flex-direction: column; gap: 1rem; }
-  .outcome-item {
-    display: flex; gap: 1rem; align-items: flex-start;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1.25rem;
-    transition: border-color 0.2s;
-  }
-  .outcome-item:hover { border-color: var(--accent); }
-  .outcome-icon {
-    width: 40px; height: 40px; flex-shrink: 0;
-    background: rgba(27,108,168,0.08);
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
-  }
-  .outcome-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 0.25rem; }
-  .outcome-item p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
-  .outcomes-quote {
-    background: var(--navy);
-    border-radius: 16px;
-    padding: 2.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .outcomes-quote::before {
-    content: '"';
-    position: absolute; top: -1rem; left: 1.5rem;
-    font-family: 'DM Serif Display', serif;
-    font-size: 8rem;
-    color: rgba(58,170,220,0.12);
-    line-height: 1;
-  }
-  .outcomes-quote blockquote {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.3rem;
-    color: var(--white);
-    line-height: 1.5;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    position: relative; z-index: 1;
-  }
-  .quote-source { font-size: 0.78rem; color: rgba(255,255,255,0.45); letter-spacing: 0.05em; }
-  .quote-source strong { color: var(--accent); }
+/* CONTACT */
+.contact-sec{background:var(--navy)}
+.contact-sec .sh{color:var(--white)}
+.contact-sec .ss{color:rgba(255,255,255,.5)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:3rem;align-items:start}
+.clinks{display:flex;flex-direction:column;gap:.85rem}
+.clink{display:flex;align-items:center;gap:.9rem;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);border-radius:9px;padding:1rem 1.1rem;
+  text-decoration:none;color:rgba(255,255,255,.7);font-size:.87rem;transition:all .2s}
+.clink:hover{border-color:var(--accent);color:var(--accent)}
+.clink-icon{width:34px;height:34px;background:rgba(58,170,220,.1);border-radius:7px;
+  display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.avail{margin-top:1rem;padding:1.1rem;background:rgba(58,170,220,.06);
+  border:1px solid rgba(58,170,220,.18);border-radius:9px}
+.avail p{font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.6}
+.avail strong{color:var(--accent)}
 
-  /* ── ABOUT ── */
-  .about { background: var(--warm); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: center; }
-  .about-visual {
-    background: linear-gradient(135deg, var(--navy), var(--navy2));
-    border-radius: 20px;
-    padding: 2.5rem;
-    text-align: center;
-    border: 1px solid rgba(58,170,220,0.2);
-  }
-  .about-initials {
-    width: 100px; height: 100px;
-    background: var(--accent);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.5rem;
-    color: var(--navy);
-    margin: 0 auto 1.5rem;
-  }
-  .about-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.5rem;
-    color: var(--white);
-    margin-bottom: 0.4rem;
-  }
-  .about-title { font-size: 0.82rem; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; }
-  .about-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
-  .badge {
-    background: rgba(58,170,220,0.12);
-    border: 1px solid rgba(58,170,220,0.25);
-    border-radius: 100px;
-    padding: 0.3rem 0.75rem;
-    font-size: 0.72rem;
-    color: var(--accent);
-    font-weight: 500;
-  }
-  .about-content p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.25rem; }
-  .about-content strong { color: var(--text); }
-  .credentials { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; }
-  .credential {
-    display: flex; align-items: center; gap: 0.6rem;
-    font-size: 0.83rem;
-    color: var(--text);
-    padding: 0.6rem;
-    background: var(--white);
-    border-radius: 8px;
-    border: 1px solid var(--border);
-  }
-  .credential span:first-child { font-size: 1rem; }
+/* FORM */
+.cform{display:flex;flex-direction:column;gap:.8rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.ff{display:flex;flex-direction:column;gap:.35rem}
+.ff label{font-size:.73rem;color:rgba(255,255,255,.45);letter-spacing:.04em}
+.ff input,.ff textarea,.ff select{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:7px;padding:.7rem .9rem;color:var(--white);
+  font-family:'DM Sans',sans-serif;font-size:.86rem;outline:none;
+  transition:border-color .2s;width:100%}
+.ff input:focus,.ff textarea:focus,.ff select:focus{
+  border-color:var(--accent);background:rgba(58,170,220,.05)}
+.ff textarea{resize:vertical;min-height:90px}
+.ff select option{background:var(--navy2);color:var(--white)}
+.ff input::placeholder,.ff textarea::placeholder{color:rgba(255,255,255,.25)}
+.btn-send{background:var(--accent);color:var(--navy);border:none;
+  padding:.88rem 2rem;border-radius:8px;font-family:'DM Sans',sans-serif;
+  font-size:.92rem;font-weight:600;cursor:pointer;transition:all .2s;width:100%}
+.btn-send:hover:not(:disabled){background:var(--mint);transform:translateY(-1px)}
+.btn-send:disabled{opacity:.7;cursor:not-allowed}
+.form-note{font-size:.72rem;color:rgba(255,255,255,.3);text-align:center;margin-top:.25rem}
+.form-success{display:none;background:rgba(26,122,74,.12);
+  border:1px solid rgba(26,122,74,.3);border-radius:10px;padding:2rem;text-align:center}
+.form-success.show{display:block}
+.form-success h4{font-family:'DM Serif Display',serif;font-size:1.3rem;
+  color:var(--white);margin-bottom:.5rem}
+.form-success p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.65}
+.form-success a{color:var(--accent)}
 
-  /* ── CONTACT ── */
-  .contact { background: var(--navy); }
-  .contact .section-heading { color: var(--white); }
-  .contact .section-sub { color: rgba(255,255,255,0.5); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-  .contact-info { display: flex; flex-direction: column; gap: 1rem; }
-  .contact-link {
-    display: flex; align-items: center; gap: 1rem;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 10px;
-    padding: 1.1rem 1.25rem;
-    text-decoration: none;
-    color: rgba(255,255,255,0.75);
-    font-size: 0.9rem;
-    transition: all 0.2s;
-  }
-  .contact-link:hover { border-color: var(--accent); color: var(--accent); }
-  .contact-link-icon {
-    width: 36px; height: 36px;
-    background: rgba(58,170,220,0.12);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1rem;
-    flex-shrink: 0;
-  }
-  .contact-form { display: flex; flex-direction: column; gap: 0.9rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
-  .form-field { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-field label { font-size: 0.78rem; color: rgba(255,255,255,0.5); letter-spacing: 0.04em; }
-  .form-field input, .form-field textarea, .form-field select {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-    color: var(--white);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem;
-    outline: none;
-    transition: border-color 0.2s;
-    width: 100%;
-  }
-  .form-field input:focus, .form-field textarea:focus, .form-field select:focus {
-    border-color: var(--accent);
-  }
-  .form-field textarea { resize: vertical; min-height: 100px; }
-  .form-field select option { background: var(--navy2); }
-  .btn-submit {
-    background: var(--accent);
-    color: var(--navy);
-    border: none;
-    padding: 0.9rem 2rem;
-    border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-    letter-spacing: 0.02em;
-  }
-  .btn-submit:hover { background: var(--mint); transform: translateY(-1px); }
+/* FOOTER */
+footer{background:#07111B;padding:1.75rem 6%;display:flex;align-items:center;
+  justify-content:space-between;border-top:1px solid rgba(255,255,255,.05);
+  flex-wrap:wrap;gap:.75rem}
+footer p{font-size:.76rem;color:rgba(255,255,255,.28)}
+.foot-stds{display:flex;gap:1.25rem;list-style:none;flex-wrap:wrap}
+.foot-stds li{font-size:.7rem;color:rgba(255,255,255,.22)}
+.foot-stds li span{color:var(--accent)}
 
-  /* ── FOOTER ── */
-  footer {
-    background: #081017;
-    padding: 2rem 8%;
-    display: flex; align-items: center; justify-content: space-between;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
-  .footer-standards {
-    display: flex; gap: 1.5rem;
-    list-style: none;
-  }
-  .footer-standards li {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.25);
-    letter-spacing: 0.04em;
-  }
-  .footer-standards li span { color: var(--accent); }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; padding-top: 120px; }
-    .hero-stats { grid-template-columns: repeat(2, 1fr); }
-    .problem-grid, .services-grid, .standards-grid, .outcomes-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-    .process-steps { grid-template-columns: 1fr 1fr; }
-    .process-steps::before { display: none; }
-    nav .nav-links { display: none; }
-    .credentials { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 1rem; text-align: center; }
-    .footer-standards { flex-wrap: wrap; justify-content: center; }
-    .form-row { grid-template-columns: 1fr; }
-  }
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .svcs,.std-grid,.frow{grid-template-columns:1fr}
+  .pipe-steps{grid-template-columns:1fr 1fr}
+  .pipe-steps::before{display:none}
+  nav .nav-links{display:none}
+  .creds{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo">Damce<span>y</span> MVA</div>
+  <div class="logo">Damce<span>y</span> MVA</div>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#problemx">How It Works</a></li>
     <li><a href="#standards">Standards</a></li>
-    <li><a href="#outcomes">Outcomes</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact" class="nav-cta">Work With Me</a></li>
   </ul>
@@ -641,40 +296,26 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content" style="animation: fadeUp 0.6s both;">
-    <div class="hero-tag">Available for New Clients</div>
+  <div style="animation:fadeUp .6s both">
+    <div class="tag">Available for New Clients</div>
     <h1>Your clinic's revenue starts at <em>registration.</em></h1>
-    <p class="hero-sub">
-      <strong>20–30% of claim denials</strong> trace back to the front desk. I help outpatient practices eliminate those errors at the source — through precision patient intake, 6-point identity verification, and real-time insurance eligibility workflows.
-    </p>
-    <div class="hero-btns">
-      <a href="#services" class="btn-primary">View Services</a>
-      <a href="#contact" class="btn-outline">Start With a Free Consult</a>
+    <p class="hero-sub"><strong>20–30% of claim denials</strong> trace back to the front desk. I help outpatient practices eliminate those errors at the source — through precision patient intake, 6-point identity verification, and real-time insurance eligibility workflows.</p>
+    <div class="btns">
+      <a href="#services" class="btn-p">View Services</a>
+      <a href="#contact" class="btn-g">Book a Free 15-Min Call</a>
     </div>
   </div>
-  <div class="hero-stats">
-    <div class="stat-card">
-      <div class="stat-number">30%</div>
-      <div class="stat-label">of claim denials caused by registration errors</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">$700K</div>
-      <div class="stat-label">ROI documented by Cleveland Clinic in year 1</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">42%</div>
-      <div class="stat-label">error reduction via standardized workflows (Mayo Clinic)</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">5%</div>
-      <div class="stat-label">target error rate (down from 23%) per Floyd Medical</div>
-    </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-n">30%</div><div class="stat-l">of claim denials caused by registration errors</div></div>
+    <div class="stat"><div class="stat-n">$700K</div><div class="stat-l">ROI documented by Cleveland Clinic in Year 1</div></div>
+    <div class="stat"><div class="stat-n">42%</div><div class="stat-l">error reduction via standardized workflows</div></div>
+    <div class="stat"><div class="stat-n">5%</div><div class="stat-l">target error rate (down from 23%) per Floyd Medical</div></div>
   </div>
 </section>
 
 <!-- PROBLEM -->
-<section class="problem">
-  <span class="section-label">The Problem</span>
+<section class="problem" id="problemx">
+  <span class="section-label">The problem</span>
   <h2 class="section-heading">What registration errors actually cost you</h2>
   <p class="section-sub">One transposed digit in an insurance ID triggers a cascade — claim denial, billing rework, delayed payment, frustrated patients, and eroded trust. It all starts at the front desk.</p>
   <div class="problem-grid">
@@ -697,34 +338,33 @@
 </section>
 
 <!-- SERVICES -->
-<section class="services" id="services">
-  <span class="section-label">Services</span>
-  <h2 class="section-heading">Three ways I protect your revenue cycle</h2>
-  <p class="section-sub">Each service is fixed-scope, fixed-price, and built on the same clinical registration standards used by the country's leading health systems.</p>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">🔍</div>
-      <div class="service-number">Service 01</div>
+<section id="services" style="background:var(--cream)">
+  <span class="lbl">Services</span>
+  <h2 class="sh">Three ways I protect your revenue cycle</h2>
+  <p class="ss">Fixed scope. Fixed price. Built on the same clinical registration standards used by the country's leading health systems.</p>
+  <div class="svcs">
+    <div class="svc">
+      <div class="svc-icon">🔍</div>
+      <div class="svc-num">Service 01</div>
       <h3>Precision Intake Audit</h3>
-      <p class="service-desc">A one-time deep review of your current registration process. You get a written findings report with specific gaps and prioritized recommendations — before errors reach billing.</p>
-      <ul class="service-deliverables">
+      <p class="svc-desc">A one-time deep review of your registration process. Written findings report with specific gaps and prioritized recommendations — before errors reach billing.</p>
+      <ul>
         <li>6-identifier verification gap analysis</li>
         <li>Mandatory field compliance review (CMS 1500)</li>
         <li>Top error pattern identification</li>
         <li>Written findings report + recommendations</li>
         <li>Priority action checklist</li>
       </ul>
-      <div class="service-price">$300 – $500</div>
-      <div class="service-timeline">⏱ Delivered in 5–7 business days · One-time project</div>
-      <a href="#contact" class="btn-service">Request an Audit</a>
+      <div class="svc-price">$300 – $500</div>
+      <div class="svc-time">⏱ 5–7 business days · One-time project</div>
+      <a href="#contact" class="btn-s">Request an Audit →</a>
     </div>
-
-    <div class="service-card featured">
-      <div class="service-icon">⚙️</div>
-      <div class="service-number">Service 02</div>
+    <div class="svc feat">
+      <div class="svc-icon">⚙️</div>
+      <div class="svc-num">Service 02</div>
       <h3>Registration Accuracy Package</h3>
-      <p class="service-desc">A done-for-you system that installs standardized intake scripts, quality checklists, and insurance verification workflows directly into your front-desk operation.</p>
-      <ul class="service-deliverables">
+      <p class="svc-desc">Done-for-you system. Custom intake scripts, 7-step workflow cards, quality checklists, and insurance verification tools — ready to use from Day 1.</p>
+      <ul>
         <li>Custom registration script for your clinic</li>
         <li>7-step systematic workflow document</li>
         <li>Mandatory field reference card</li>
@@ -732,253 +372,207 @@
         <li>Error prevention staff guide</li>
         <li>Pre-save quality check template</li>
       </ul>
-      <div class="service-price">$600 – $1,200</div>
-      <div class="service-timeline">⏱ 10–14 business days · Includes one revision</div>
-      <a href="#contact" class="btn-service">Get the Package</a>
+      <div class="svc-price">$600 – $1,200</div>
+      <div class="svc-time">⏱ 10–14 business days · Includes one revision</div>
+      <a href="#contact" class="btn-s">Get the Package →</a>
     </div>
-
-    <div class="service-card">
-      <div class="service-icon">📊</div>
-      <div class="service-number">Service 03</div>
+    <div class="svc">
+      <div class="svc-icon">📊</div>
+      <div class="svc-num">Service 03</div>
       <h3>Monthly Quality Retainer</h3>
-      <p class="service-desc">Ongoing registration quality support. I review records, track error patterns, update SOPs as payer rules change, and keep your team accountable to clean-claim standards.</p>
-      <ul class="service-deliverables">
+      <p class="svc-desc">Ongoing quality monitoring. Monthly record reviews, error tracking, SOP updates when payer rules change, and accountability to clean-claim standards.</p>
+      <ul>
         <li>Monthly registration record sample review</li>
         <li>Error pattern report + corrections</li>
         <li>SOP updates for payer rule changes</li>
-        <li>Staff Q&A on complex registration scenarios</li>
+        <li>Staff Q&amp;A on complex scenarios</li>
         <li>Quarterly accuracy scorecard</li>
       </ul>
-      <div class="service-price">$400 – $800/mo</div>
-      <div class="service-timeline">⏱ Ongoing · 3-month minimum engagement</div>
-      <a href="#contact" class="btn-service">Start a Retainer</a>
+      <div class="svc-price">$400 – $800/mo</div>
+      <div class="svc-time">⏱ Ongoing · 3-month minimum</div>
+      <a href="#contact" class="btn-s">Start a Retainer →</a>
     </div>
   </div>
 </section>
 
 <!-- STANDARDS -->
-<section class="standards" id="standards">
-  <span class="section-label">My Standards</span>
-  <h2 class="section-heading">The backbone behind every engagement</h2>
-  <p class="section-sub">These are non-negotiable clinical registration standards — not suggestions. They are what separates precise revenue cycle administration from generic data entry.</p>
-  <div class="standards-grid">
-    <div class="standard-block">
-      <h4><span>🪪</span> The 6-Identifier Verification Standard</h4>
-      <p>Every registration must capture and verify all six identifiers — no exceptions, no shortcuts.</p>
-      <div class="standard-items">
-        <div class="standard-item">Full legal name (exactly as on Gov ID — no nicknames)</div>
-        <div class="standard-item">Date of birth — MM/DD/YYYY with 4-digit year</div>
-        <div class="standard-item">Government-issued ID number (not SSN as primary)</div>
-        <div class="standard-item">Insurance policy number AND group number</div>
-        <div class="standard-item">Current residential address (no PO boxes)</div>
-        <div class="standard-item">Primary phone number with area code</div>
+<section class="stds" id="standards">
+  <span class="lbl">My Standards</span>
+  <h2 class="sh">The backbone behind every engagement</h2>
+  <p class="ss">Non-negotiable clinical registration standards — not suggestions. What separates precision revenue cycle administration from generic data entry.</p>
+  <div class="std-grid">
+    <div class="std">
+      <h4>🪪 6-Identifier Verification Standard</h4>
+      <p>Every registration captures and verifies all six — no exceptions.</p>
+      <div class="std-items">
+        <div class="std-item">Full legal name — exactly as on Government ID, no nicknames</div>
+        <div class="std-item">Date of birth — MM/DD/YYYY with 4-digit year</div>
+        <div class="std-item">Government-issued ID number (not SSN as primary)</div>
+        <div class="std-item">Insurance policy number AND group number</div>
+        <div class="std-item">Current residential address (no PO boxes)</div>
+        <div class="std-item">Primary phone number with area code</div>
       </div>
     </div>
-    <div class="standard-block">
-      <h4><span>📋</span> The 7-Step Registration Workflow</h4>
-      <p>Same steps, same order, every patient, every visit. Consistency eliminates variability.</p>
-      <div class="standard-items">
-        <div class="standard-item">Collect documents before touching the computer</div>
-        <div class="standard-item">Visual verification — photo match + document validity</div>
-        <div class="standard-item">Data entry with source document visible at all times</div>
-        <div class="standard-item">Read-back all numerical fields against document</div>
-        <div class="standard-item">Complete insurance data character by character</div>
-        <div class="standard-item">Inline quality check before saving the record</div>
-        <div class="standard-item">Verbal confirmation of address + phone with patient</div>
+    <div class="std">
+      <h4>📋 7-Step Registration Workflow</h4>
+      <p>Same steps, same order, every patient, every visit.</p>
+      <div class="std-items">
+        <div class="std-item">Collect documents before touching the computer</div>
+        <div class="std-item">Visual verification — photo match, document validity</div>
+        <div class="std-item">Data entry with source document visible at all times</div>
+        <div class="std-item">Read-back all numerical fields against document</div>
+        <div class="std-item">Complete insurance data character by character</div>
+        <div class="std-item">Inline quality check before saving the record</div>
+        <div class="std-item">Verbal confirmation of address and phone with patient</div>
       </div>
     </div>
-    <div class="standard-block">
-      <h4><span>🔒</span> The 5-Step Insurance Verification Standard</h4>
-      <p>Real-time verification — not visual card inspection. Coverage confirmed before services.</p>
-      <div class="standard-items">
-        <div class="standard-item">Collect current card — ask "Is this for today's visit?"</div>
-        <div class="standard-item">Access payer portal, integrated PM system, or clearinghouse</div>
-        <div class="standard-item">Enter patient data exactly as shown on insurance card</div>
-        <div class="standard-item">Review: status, dates, plan type, copay, network, auths</div>
-        <div class="standard-item">Document confirmation number + communicate to patient</div>
+    <div class="std">
+      <h4>🔒 5-Step Insurance Verification</h4>
+      <p>Real-time portal verification — not visual card inspection.</p>
+      <div class="std-items">
+        <div class="std-item">Collect current card — ask "Is this for today's visit?"</div>
+        <div class="std-item">Access payer portal, PM system, or clearinghouse</div>
+        <div class="std-item">Enter patient data exactly as shown on card</div>
+        <div class="std-item">Review: status, dates, copay, network, authorizations</div>
+        <div class="std-item">Document confirmation number + communicate copay</div>
       </div>
     </div>
-    <div class="standard-block">
-      <h4><span>📐</span> Mandatory Field Standard (CMS 1500)</h4>
-      <p>Every mandatory field complete before the patient receives clinical services.</p>
-      <div class="standard-items">
-        <div class="standard-item">Core demographics: name, DOB, sex at birth, SSN</div>
-        <div class="standard-item">Contact: residential address (no PO boxes), phone + area code</div>
-        <div class="standard-item">Insurance: carrier, member ID, group number, effective dates</div>
-        <div class="standard-item">Dependent coverage: policyholder name + DOB + relationship</div>
-        <div class="standard-item">Benchmark: error rate maintained below 5%</div>
-        <div class="standard-item">Target: 95%+ clean claim rate on first submission</div>
+    <div class="std">
+      <h4>📐 CMS 1500 Mandatory Field Standard</h4>
+      <p>Every mandatory field complete before services are rendered.</p>
+      <div class="std-items">
+        <div class="std-item">Core: full legal name, DOB, sex at birth, SSN</div>
+        <div class="std-item">Contact: residential address, 10-digit phone</div>
+        <div class="std-item">Insurance: carrier, member ID, group number, dates</div>
+        <div class="std-item">Dependents: policyholder name, DOB, relationship</div>
+        <div class="std-item">Benchmark: error rate below 5% · Clean claims 95%+</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process">
-  <span class="section-label">How It Works</span>
-  <h2 class="section-heading">From first contact to clean claims</h2>
-  <p class="section-sub">Every engagement follows the same structured path — low-risk, high-clarity, with measurable outcomes at every stage.</p>
-  <div class="process-steps">
-    <div class="process-step">
-      <div class="step-num">1</div>
-      <h4>Discovery Call</h4>
-      <p>15-minute conversation to diagnose your current registration gaps and identify the right starting service.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-num">2</div>
-      <h4>Precision Audit</h4>
-      <p>I review your registration process against clinical standards and deliver a findings report within 7 days.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-num">3</div>
-      <h4>System Install</h4>
-      <p>I build and deliver your custom scripts, checklists, and verification workflows ready for immediate use.</p>
-    </div>
-    <div class="process-step">
-      <div class="step-num">4</div>
-      <h4>Ongoing Quality</h4>
-      <p>Monthly monitoring, error tracking, and SOP updates keep your registration accuracy and clean claims high.</p>
-    </div>
-  </div>
-</section>
-
-<!-- OUTCOMES -->
-<section class="outcomes" id="outcomes">
-  <span class="section-label">Outcomes</span>
-  <h2 class="section-heading">What accurate registration actually produces</h2>
-  <p class="section-sub">Registration accuracy simultaneously protects three critical domains of your clinic's operation.</p>
-  <div class="outcomes-grid">
-    <div class="outcomes-list">
-      <div class="outcome-item">
-        <div class="outcome-icon">💰</div>
-        <div>
-          <h4>Revenue Protection</h4>
-          <p>Clean first-pass claims, faster reimbursement, fewer billing staff hours spent on error correction and resubmission.</p>
-        </div>
-      </div>
-      <div class="outcome-item">
-        <div class="outcome-icon">🛡️</div>
-        <div>
-          <h4>Patient Safety</h4>
-          <p>Correct identifiers prevent chart confusion, medication errors, and wrong-patient clinical decisions — every field is a safety checkpoint.</p>
-        </div>
-      </div>
-      <div class="outcome-item">
-        <div class="outcome-icon">⭐</div>
-        <div>
-          <h4>Patient Trust</h4>
-          <p>No surprise bills. Appointment reminders that arrive. Financial transparency at check-in. These are the things patients remember.</p>
-        </div>
-      </div>
-      <div class="outcome-item">
-        <div class="outcome-icon">⚡</div>
-        <div>
-          <h4>Staff Efficiency</h4>
-          <p>Standardized workflows reduce training time, eliminate guesswork, and free your team to focus on care — not rework.</p>
-        </div>
-      </div>
-    </div>
-    <div class="outcomes-quote">
-      <blockquote>"Practices conducting real-time insurance verification at registration reduced their claim denial rates by 20–30%. That's not a marginal improvement — that's transformative revenue cycle impact."</blockquote>
-      <p class="quote-source">— <strong>MGMA Research</strong> · Medical Group Management Association</p>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
-  <span class="section-label">About</span>
-  <h2 class="section-heading">Precision, not just administration</h2>
+  <span class="lbl">About</span>
+  <h2 class="sh">Precision, not just administration</h2>
   <div class="about-grid">
-    <div class="about-visual">
-      <div class="about-initials">DA</div>
+    <div class="about-card">
+      <div class="about-init">DA</div>
       <div class="about-name">Damilola</div>
       <div class="about-title">Certified Medical Assistant · Revenue Cycle Specialist</div>
-      <div class="about-badges">
+      <div class="badges">
         <span class="badge">Patient Intake</span>
         <span class="badge">Insurance Verification</span>
         <span class="badge">EHR Administration</span>
         <span class="badge">CMS 1500</span>
         <span class="badge">Revenue Cycle</span>
-        <span class="badge">HIPAA Compliant</span>
+        <span class="badge">HIPAA Aware</span>
       </div>
     </div>
-    <div class="about-content">
-      <p>I'm a certified medical assistant specializing in the administrative side of clinical operations — specifically the front-end revenue cycle processes where most clinics lose money without realizing it.</p>
-      <p>My training is grounded in the same frameworks used by Mayo Clinic, Cleveland Clinic, and Floyd Medical Center: <strong>6-identifier verification, 7-step systematic registration, and real-time insurance eligibility protocols.</strong> These aren't best practices I read about — they're the operational standards I apply in every engagement.</p>
+    <div class="about-text">
+      <p>I'm a certified medical assistant specialising in the administrative side of clinical operations — specifically the front-end revenue cycle processes where most clinics lose money without realising it.</p>
+      <p>My training is grounded in the same frameworks used by Mayo Clinic, Cleveland Clinic, and Floyd Medical Center: <strong>6-identifier verification, 7-step systematic registration, and real-time insurance eligibility protocols.</strong></p>
       <p>I work with small-to-mid-size outpatient practices, physician offices, and telehealth operations that want to clean up their registration process without hiring another full-time staff member.</p>
-      <div class="credentials">
-        <div class="credential"><span>✅</span> CMS 1500 Compliance</div>
-        <div class="credential"><span>✅</span> HIPAA Privacy Standards</div>
-        <div class="credential"><span>✅</span> EHR / PM Systems</div>
-        <div class="credential"><span>✅</span> Insurance Payer Portals</div>
-        <div class="credential"><span>✅</span> ICD-10 / CPT Coding</div>
-        <div class="credential"><span>✅</span> Revenue Cycle Workflow</div>
+      <div class="creds">
+        <div class="cred">✅ CMS 1500 Compliance</div>
+        <div class="cred">✅ HIPAA Privacy Standards</div>
+        <div class="cred">✅ EHR / PM Systems</div>
+        <div class="cred">✅ Insurance Payer Portals</div>
+        <div class="cred">✅ ICD-10 / CPT Coding</div>
+        <div class="cred">✅ Revenue Cycle Workflow</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
-  <span class="section-label">Contact</span>
-  <h2 class="section-heading">Let's talk about your registration process</h2>
-  <p class="section-sub">Start with a free 15-minute discovery call. I'll tell you exactly where your biggest registration gaps are — and which service makes the most sense to start with.</p>
+<section class="contact-sec" id="contact">
+  <span class="lbl" style="border-color:rgba(58,170,220,.3);background:rgba(58,170,220,.08)">Contact</span>
+  <h2 class="sh">Let's talk about your registration process</h2>
+  <p class="ss">Start with a free 15-minute discovery call. I'll tell you exactly where your biggest gaps are and which service makes the most sense to start with.</p>
   <div class="contact-grid">
-    <div class="contact-info">
-      <a href="mailto:uche.damilynda@gmail.com" class="contact-link">
-        <div class="contact-link-icon">✉️</div>
-        uche.damilynda@gmail.com
-      </a>
-      <a href="https://www.linkedin.com/in/damilola-tech-med/" target="_blank" class="contact-link">
-        <div class="contact-link-icon">💼</div>
-        linkedin.com/in/damilola-tech-med
-      </a>
-      <div style="margin-top:1rem; padding:1.25rem; background:rgba(58,170,220,0.07); border:1px solid rgba(58,170,220,0.2); border-radius:10px;">
-        <p style="font-size:0.82rem; color:rgba(255,255,255,0.55); line-height:1.6;">
-          <strong style="color:var(--accent);">Currently accepting:</strong><br>
-          Small trial projects · Outpatient practice audits · Ongoing retainer engagements
-        </p>
+    <div>
+      <div class="clinks">
+        <a href="mailto:uche.damilynda@gmail.com" class="clink">
+          <div class="clink-icon">✉️</div>uche.damilynda@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/damilola-tech-med/" target="_blank" class="clink">
+          <div class="clink-icon">💼</div>LinkedIn — damilola-tech-med
+        </a>
+        <a href="#" target="_blank" class="clink" id="fb-page-link">
+          <div class="clink-icon">📘</div>Facebook — Damcey MVA
+        </a>
+      </div>
+      <div class="avail">
+        <p><strong>Currently accepting:</strong><br>
+        Trial projects · Outpatient audits · Ongoing retainers</p>
       </div>
     </div>
-    <form class="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-row">
-        <div class="form-field">
-          <label>Your Name</label>
-          <input type="text" placeholder="Jane Smith" required>
+
+    <!--
+    ┌─────────────────────────────────────────────┐
+    │  REPLACE YOUR_FORMSPREE_ID below            │
+    │  Get your ID free at: formspree.io          │
+    └─────────────────────────────────────────────┘
+    -->
+    <div>
+      <form class="cform" id="leadForm"
+        action="https://formspree.io/f/mgorpkko"
+        method="POST">
+
+        <!-- Hidden tracking fields — auto-populated by JS -->
+        <input type="hidden" name="_subject" value="New Lead — Damcey MVA">
+        <input type="hidden" name="lead_source" id="leadSource" value="website-direct">
+        <input type="hidden" name="page_url" id="pageUrl" value="">
+
+        <div class="frow">
+          <div class="ff">
+            <label>Your Name *</label>
+            <input type="text" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="ff">
+            <label>Clinic / Organization</label>
+            <input type="text" name="clinic" placeholder="Springfield Family Practice">
+          </div>
         </div>
-        <div class="form-field">
-          <label>Clinic / Organization</label>
-          <input type="text" placeholder="Springfield Family Practice">
+        <div class="ff">
+          <label>Email Address *</label>
+          <input type="email" name="email" placeholder="jane@clinic.com" required>
         </div>
+        <div class="ff">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="+1 555 234 5678">
+        </div>
+        <div class="ff">
+          <label>Service You're Interested In *</label>
+          <select name="service" required>
+            <option value="">Select a service...</option>
+            <option value="audit">Service 01 — Precision Intake Audit ($300–$500)</option>
+            <option value="package">Service 02 — Registration Accuracy Package ($600–$1,200)</option>
+            <option value="retainer">Service 03 — Monthly Quality Retainer ($400–$800/mo)</option>
+            <option value="discovery">Not sure yet — book a free discovery call</option>
+          </select>
+        </div>
+        <div class="ff">
+          <label>Biggest Registration Challenge</label>
+          <textarea name="challenge" placeholder="e.g. Our claim denial rate is around 25%, mostly registration errors…"></textarea>
+        </div>
+        <button type="submit" class="btn-send" id="submitBtn">Send Message →</button>
+        <p class="form-note">I respond to every enquiry within 24 hours.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <h4>✓ Message received!</h4>
+        <p>Thank you — I'll review your details and be in touch within 24 hours to confirm your free discovery call.<br><br>
+        In the meantime, connect on <a href="https://www.linkedin.com/in/damilola-tech-med/" target="_blank">LinkedIn</a>.</p>
       </div>
-      <div class="form-field">
-        <label>Email Address</label>
-        <input type="email" placeholder="jane@clinic.com" required>
-      </div>
-      <div class="form-field">
-        <label>Service Interest</label>
-        <select>
-          <option value="">Select a service...</option>
-          <option>Service 01 — Precision Intake Audit ($300–$500)</option>
-          <option>Service 02 — Registration Accuracy Package ($600–$1,200)</option>
-          <option>Service 03 — Monthly Quality Retainer ($400–$800/mo)</option>
-          <option>Not sure — book a free discovery call first</option>
-        </select>
-      </div>
-      <div class="form-field">
-        <label>Tell me about your biggest registration challenge</label>
-        <textarea placeholder="e.g. Our claim denial rate is around 25%, most seem to be from registration errors..."></textarea>
-      </div>
-      <button type="submit" class="btn-submit">Send Message →</button>
-    </form>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Damcey MVA · Healthcare Registration Services</p>
-  <ul class="footer-standards">
+  <p>© 2026 Damcey MVA · Healthcare Registration Services · uche.damilynda@gmail.com</p>
+  <ul class="foot-stds">
     <li><span>✓</span> CMS 1500 Compliant</li>
     <li><span>✓</span> HIPAA Aware</li>
     <li><span>✓</span> 6-Identifier Standard</li>
@@ -987,12 +581,44 @@
 </footer>
 
 <script>
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('.btn-submit');
-  btn.textContent = '✓ Message Sent — I\'ll be in touch within 24 hours';
-  btn.style.background = '#2DD4BF';
-  btn.disabled = true;
+// Capture UTM source from URL (LinkedIn, Facebook, or direct)
+(function(){
+  const p = new URLSearchParams(window.location.search);
+  const src = p.get('utm_source') || 'direct';
+  const el = document.getElementById('leadSource');
+  if(el) el.value = 'website-' + src;
+  const pu = document.getElementById('pageUrl');
+  if(pu) pu.value = window.location.href;
+})();
+
+// Form submission via fetch (no page redirect)
+const form = document.getElementById('leadForm');
+const btn  = document.getElementById('submitBtn');
+const succ = document.getElementById('formSuccess');
+
+if(form){
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if(res.ok){
+        form.style.display = 'none';
+        succ.classList.add('show');
+      } else {
+        btn.textContent = 'Error — email uche.damilynda@gmail.com directly';
+        btn.disabled = false;
+      }
+    } catch(err){
+      btn.textContent = 'Network error — please email directly';
+      btn.disabled = false;
+    }
+  });
 }
 </script>
 </body>
