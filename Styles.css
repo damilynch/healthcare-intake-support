@@ -1,0 +1,675 @@
+# index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Damilola | Medical Virtual Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <div class="logo">Damcey<span>HealthVA</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="nav-btn" href="https://calendly.com/uche-damilynda/30min" target="_blank">Book a Call</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="hero-tag">Premium Healthcare Operations Support</p>
+
+        <h1>
+          Medical Virtual Assistant for modern healthcare workflows.
+        </h1>
+
+        <p class="hero-text">
+          Supporting clinics, healthcare practices, and telehealth teams with organized patient intake, insurance verification, front desk coordination, EHR workflows, and healthcare administrative operations.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://calendly.com/uche-damilynda/30min" target="_blank" class="primary-btn">
+            Schedule Discovery Call
+          </a>
+
+          <a href="#services" class="secondary-btn">
+            Explore Services
+          </a>
+        </div>
+
+        <div class="hero-metrics">
+          <div>
+            <h3>HIPAA</h3>
+            <p>Workflow Awareness</p>
+          </div>
+
+          <div>
+            <h3>EHR</h3>
+            <p>Navigation Support</p>
+          </div>
+
+          <div>
+            <h3>Insurance</h3>
+            <p>Verification Knowledge</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-card">
+          <img src="_PCS6643.jpg" alt="Medical Virtual Assistant portrait" class="hero-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands">
+    <div class="container brands-wrapper">
+      <p>Built for clinics, telehealth teams, healthcare startups, and private practices.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about section-space">
+    <div class="container about-grid">
+      <div class="about-image-box">
+        <img src="_PCS6681bw.jpg" alt="Professional healthcare virtual assistant portrait" />
+      </div>
+
+      <div class="about-content">
+        <p class="section-tag">About</p>
+
+        <h2>
+          Reliable healthcare administrative support with operational awareness.
+        </h2>
+
+        <p>
+          I support healthcare teams with detail-oriented administrative workflows that improve patient experience, reduce scheduling friction, and strengthen operational organization.
+        </p>
+
+        <p>
+          My focus includes patient intake coordination, registration accuracy, insurance structure awareness, scheduling workflows, documentation support, and healthcare communication systems.
+        </p>
+
+        <div class="about-cards">
+          <div class="mini-card">
+            <h3>Front Desk Coordination</h3>
+            <p>Patient communication, scheduling, intake, and registration support.</p>
+          </div>
+
+          <div class="mini-card">
+            <h3>Healthcare Operations</h3>
+            <p>Insurance workflows, EHR navigation, documentation, and admin systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services section-space">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Core Services</p>
+        <h2>Administrative support designed for healthcare efficiency.</h2>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon">01</div>
+          <h3>Patient Intake Coordination</h3>
+          <p>
+            Organized onboarding support, patient information management, intake communication, and registration workflows.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">02</div>
+          <h3>Insurance Verification</h3>
+          <p>
+            Eligibility verification awareness, benefits checks, payer structure understanding, and workflow support.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">03</div>
+          <h3>EHR & Documentation Support</h3>
+          <p>
+            EHR/EMR navigation, accurate data entry, documentation workflows, and administrative coordination.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">04</div>
+          <h3>Front Desk Operations</h3>
+          <p>
+            Appointment scheduling, communication workflows, follow-ups, and operational organization.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise" class="expertise section-space">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-tag">Healthcare Operations Knowledge</p>
+        <h2>Built with modern healthcare workflow awareness.</h2>
+      </div>
+
+      <div class="expertise-grid">
+        <div class="expertise-item">Commercial Insurance</div>
+        <div class="expertise-item">Managed Care Plans</div>
+        <div class="expertise-item">HMO / PPO / EPO / POS</div>
+        <div class="expertise-item">Prior Authorization</div>
+        <div class="expertise-item">Referral Coordination</div>
+        <div class="expertise-item">Scheduling Workflows</div>
+        <div class="expertise-item">Claims Fundamentals</div>
+        <div class="expertise-item">EOB & ERA Understanding</div>
+        <div class="expertise-item">HIPAA Awareness</div>
+        <div class="expertise-item">ICD-10 / CPT Basics</div>
+        <div class="expertise-item">Copay & Deductibles</div>
+        <div class="expertise-item">Documentation Support</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workflow" class="workflow section-space">
+    <div class="container workflow-grid">
+      <div>
+        <p class="section-tag">Workflow Showcase</p>
+
+        <h2>
+          Structured systems that support healthcare teams remotely.
+        </h2>
+
+        <p>
+          Organized workflows help practices reduce delays, improve patient communication, and maintain consistent administrative operations.
+        </p>
+      </div>
+
+      <div class="workflow-cards">
+        <div class="workflow-card">
+          <span>01</span>
+          <h3>Patient Registration</h3>
+          <p>Accurate intake documentation and patient onboarding support.</p>
+        </div>
+
+        <div class="workflow-card">
+          <span>02</span>
+          <h3>Insurance Coordination</h3>
+          <p>Eligibility checks, benefits review, and workflow communication.</p>
+        </div>
+
+        <div class="workflow-card">
+          <span>03</span>
+          <h3>Scheduling Management</h3>
+          <p>Appointment coordination and front desk workflow organization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-box">
+      <div>
+        <p class="section-tag light">Recruiter Ready</p>
+        <h2>
+          Looking for a dependable Medical Virtual Assistant?
+        </h2>
+      </div>
+
+      <a href="https://calendly.com/uche-damilynda/30min" target="_blank" class="primary-btn light-btn">
+        Schedule a Conversation
+      </a>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>DamceyHealthVA</h3>
+        <p>
+          Professional healthcare administrative support for clinics, telehealth practices, and healthcare teams.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Book a Call</h4>
+        <a class="footer-link" href="https://calendly.com/uche-damilynda/30min" target="_blank">
+          Open Calendly
+        </a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2026 DamceyHealthVA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+---
+
+# styles.css
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0f766e;
+  --secondary: #14b8a6;
+  --accent: #f4b860;
+  --dark: #0f172a;
+  --text: #475569;
+  --light: #f8fafc;
+  --white: #ffffff;
+  --border: #e2e8f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.7;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+.section-space {
+  padding: 100px 0;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(226,232,240,0.7);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a,
+.footer a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.footer a:hover {
+  color: var(--primary);
+}
+
+.nav-btn,
+.primary-btn,
+.secondary-btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.nav-btn,
+.primary-btn {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.nav-btn {
+  padding: 12px 20px;
+}
+
+.primary-btn {
+  padding: 16px 24px;
+}
+
+.secondary-btn {
+  padding: 16px 24px;
+  border: 1px solid var(--border);
+  color: var(--dark);
+  background: var(--white);
+}
+
+.primary-btn:hover,
+.nav-btn:hover {
+  background: var(--secondary);
+}
+
+.secondary-btn:hover {
+  border-color: var(--primary);
+}
+
+.hero {
+  padding: 120px 0 80px;
+}
+
+.hero-grid,
+.about-grid,
+.workflow-grid,
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-tag,
+.section-tag {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.hero h1,
+.about h2,
+.section-header h2,
+.workflow h2,
+.cta-box h2 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.about h2,
+.section-header h2,
+.workflow h2,
+.cta-box h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hero-text,
+.about p,
+.workflow p,
+.service-card p,
+.cta-box p,
+.footer p {
+  color: var(--text);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin: 35px 0;
+  flex-wrap: wrap;
+}
+
+.hero-metrics {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-metrics h3 {
+  font-size: 1.4rem;
+}
+
+.hero-metrics p {
+  color: var(--text);
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #dff8f5, #ffffff);
+  border-radius: 32px;
+  padding: 20px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+}
+
+.hero-image {
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.brands {
+  padding-bottom: 40px;
+}
+
+.brands-wrapper {
+  text-align: center;
+  color: var(--text);
+}
+
+.about-image-box img {
+  border-radius: 20px;
+}
+
+.about-cards {
+  margin-top: 35px;
+  display: grid;
+  gap: 20px;
+}
+
+.mini-card,
+.service-card,
+.workflow-card {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 30px;
+  border: 1px solid var(--border);
+}
+
+.service-grid,
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.service-card {
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: rgba(20, 184, 166, 0.15);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.section-header.center {
+  text-align: center;
+}
+
+.expertise-item {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid var(--border);
+  font-weight: 600;
+}
+
+.workflow-cards {
+  display: grid;
+  gap: 20px;
+}
+
+.workflow-card span {
+  display: inline-flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(20,184,166,0.12);
+  color: var(--primary);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.cta-section {
+  padding-bottom: 100px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  padding: 60px;
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+
+.cta-box h2,
+.light {
+  color: var(--white);
+}
+
+.light-btn {
+  background: var(--white);
+  color: var(--primary);
+}
+
+.footer {
+  background: var(--white);
+  padding-top: 80px;
+}
+
+.footer-grid {
+  padding-bottom: 40px;
+}
+
+.footer h4,
+.footer h3 {
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.footer-link {
+  font-weight: 600;
+}
+
+.copyright {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 24px 0;
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .about-grid,
+  .workflow-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 80px;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .hero-metrics {
+    gap: 20px;
+  }
+}
